@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    position: sticky;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.569),3px 3px 5px rgba(0, 0, 0, 0.569);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3rem;
+    background-color: white;
+    margin-bottom: 5%;
+}
+.logo{
+    display: flex;
+    padding: 1rem;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 1rem;
+
+}
+header li{
+    list-style: none ;
+    padding-right: 2rem;
+}
