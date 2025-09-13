@@ -223,8 +223,6 @@ footer{
 </head>
 <body>
 
-    
-
 
 
 <div class="register-container" data-aos="fade-up" data-aos-duration="800">
@@ -348,43 +346,17 @@ footer{
 
 
     ?>
-
-    <footer>
-        
-        <div class="fotcont">
-
-            <div class="fotcontt">
-                <p>University of Technology and Applied Sciences</p>
-                <p>PO Box 135, Khawr As Siyabi, Suhar 311</p>
-                <p>Sultanate of Oman</p>
-            </div>
-            <div class="fotcontt">
-                <ul class="fcoimg"><img src="img/call.png" width="20px" >&nbsp; +968 22056900</ul>
-                <ul class="fcoimg"><img src="img/mail (1).png" width="20px">&nbsp; Send us email</ul>
-                <ul class="fcoimg"><img src="img/pin.png" width="20px">&nbsp; Get Map Direction</ul>
-            </div>
-            <div class="fotcontt1">
-                <img class="px" src="img/sohar-white.png"><br><br>
-                <img class="px" src="img/broad-white.png">
-            </div>
-
-
+<footer>
+    <div>
+        <h3>Department of Computer Science</h3>
+        <p>© 2025 Rivers State University</p>
+        <p>Nkpolu-Oroworukwo, Port Harcourt, Nigeria</p>
+        <div style="margin-top: 10px;">
+            <a href="mailto:csdept@rsu.edu.ng">Email Us</a> |
+            <a href="#">Visit Website</a>
         </div>
-
-        <div>
-            <div></div>
-        <div class="foco">
-            <img src="img/instagram (2).png" alt="insta" width="50px">
-            <img src="img/twitter.png" alt="X" width="30px">
-            <img src="img/linkedin-big-logo.png" alt="linkedin" width="30px">
-        </div>
-
-        <div></div>
-
     </div>
-
-
-    </footer>
+</footer>
 
 
 </body>

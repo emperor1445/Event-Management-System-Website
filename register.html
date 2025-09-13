@@ -107,9 +107,11 @@
     .nav a:hover{
         transform: scale(1.1);
         transition-duration: 0.6s;
-        color: #e06112;
+        color: black;
         text-shadow:3px 3px 4px black;
     }
+
+
     .px{
         max-width: 269px;
     }
@@ -134,19 +136,18 @@
         
      }
 
+    footer {
+      background-color: #bc5312;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-
-    
-     
-footer{
-    margin-top: 100px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #e06112;
-    padding: 5% 0% 0% 0%;
-}
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
 .fotcont{
     font-size: large;
     color: white;
@@ -179,6 +180,12 @@ footer{
         align-items: center;
         margin-top: 10px;
     }
+
+    .register-container h2 {
+  text-align: center;
+  margin-bottom: 0px;
+  color: #443eb3; 
+  }
     </style>
 
 </head>
@@ -191,11 +198,9 @@ footer{
 
         
         <div class="nav">
-        <a href="index.html" id="lnk1">home</a>
-        <a href="login.html" id="lnk2">login</a>
-        <a href="register.html" id="lnk3">register</a>
-        <a href="events.html" id="lnk4" style="display: none;">Events</a>
-        <a href="myprof.html" id="lnk5" style="display: none;">My profile</a>
+        <a href="index.html" id="lnk1">Home</a>
+        <a href="login.html" id="lnk2">Login</a>
+        <a href="register.html" id="lnk3">Register</a>
         </div>
     </div>
 
@@ -236,80 +241,41 @@ footer{
                 <input type="password" id="password" name="password" pattern="[a-zA-Z0-9_]{8,15}" title="Password must be 8-15 characters long and can only contain letters, numbers, underscores" placeholder="Enter the password" minlength=8 maxlength="15" autocomplete="off" required>
 
                 <label for="phone">Phone Number:</label>
-                <input type="text" name="phone" pattern="[0-9]{8}" placeholder="Enter mobile number" required>
+               <input type="tel" name="phone" maxlength="11" pattern="^0[789][01]\d{8}$" placeholder="Enter mobile number" required>
             </div>
             <button type="submit" class="but">Register</button>
         </form>
     </div>
 
+<footer>
+  <h3>Department of Computer Science</h3>
+  <p>© 2025 Rivers State University</p>
+  <p>Nkpolu-Oroworukwo, Port Harcourt, Nigeria</p>
+  <div>
+    <a href="mailto:csdept@rsu.edu.ng">Email Us</a> |
+    <a href="#">Visit Website</a>
+  </div>
+</footer>
 
-    <footer>
-        
-        <div class="fotcont">
-
-            <div class="fotcontt">
-                <p>University of Technology and Applied Sciences</p>
-                <p>PO Box 135, Khawr As Siyabi, Suhar 311</p>
-                <p>Sultanate of Oman</p>
-            </div>
-            <div class="fotcontt">
-                <ul class="fcoimg"><img src="img/call.png" width="20px" >&nbsp; +968 22056900</ul>
-                <ul class="fcoimg"><img src="img/mail (1).png" width="20px">&nbsp; Send us email</ul>
-                <ul class="fcoimg"><img src="img/pin.png" width="20px">&nbsp; Get Map Direction</ul>
-            </div>
-            <div class="fotcontt1">
-                <img class="px" src="img/sohar-white.png"><br><br>
-                <img class="px" src="img/broad-white.png">
-            </div>
-
-
-        </div>
-
-        <div>
-            <div></div>
-        <div class="foco">
-            <img src="img/instagram (2).png" alt="insta" width="50px">
-            <img src="img/twitter.png" alt="X" width="30px">
-            <img src="img/linkedin-big-logo.png" alt="linkedin" width="30px">
-        </div>
-
-        <div></div>
-
-    </div>
-
-
-    </footer>
-
+<script>
+  AOS.init();
+</script>
 
 </body>
-<script>
-    window.onscroll = function() {myFunction()};
-    
-    var header = document.getElementById("myHeader");
-    var sticky = header.offsetTop;
-    
-    
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header.setAttribute("class","sticky");
-        document.getElementById("lnk1").style.color= "black";
-        document.getElementById("lnk2").style.color= "black";
-        document.getElementById("lnk3").style.color= "black";
-        document.getElementById("lnk4").style.color= "black";
-        document.getElementById("lnk5").style.color= "black";
-      } else {
-        header.setAttribute("class","container");
-        document.getElementById("lnk1").style.color= "black";
-        document.getElementById("lnk2").style.color= "black";
-        document.getElementById("lnk3").style.color= "black";
-        document.getElementById("lnk4").style.color= "black";
-        document.getElementById("lnk5").style.color= "black";
-        
-      }
-    }
-    </script>
-    <script>
-        AOS.init();
-    </script>
-
 </html>
+
+
+
+
+     <!-- .register-container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .register-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }  -->

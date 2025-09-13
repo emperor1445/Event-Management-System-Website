@@ -11,21 +11,36 @@
     
     <title>Events</title>
     <style>
-        body{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin:0;
-            padding:0;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+
     .container{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 99.5%;
-        background-color: transparent;
-        transition: 0.3s;
-        margin-top: -130px;
-        margin-bottom: 30px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        color: black;
+        background-color:white;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.569),3px 3px 5px rgba(0, 0, 0, 0.569);
+        transition: 0.5s;
         padding-bottom: 5px;
+        z-index: 1000; /* or any higher value */
+
     }
     .logo{
         display: flex;
@@ -46,180 +61,113 @@
         text-decoration: none;
         font-weight: 700;
         font-size: large;
-        color: white;
+        color: black;
         font-weight: 900;
         transition: 0.3s;
     }
     .nav a:hover{
         transform: scale(1.1);
         transition-duration: 0.6s;
-        color: #e06112;
+        color: black;
         text-shadow:3px 3px 4px black;
     }
-    .px{
-        max-width: 269px;
-    }
-     .sticky{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 99.5%;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        color: black;
-        background-color:white;
-        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.569),3px 3px 5px rgba(0, 0, 0, 0.569);
-        transition: 0.5s;
-        padding-bottom: 5px;
-        z-index: 1000; /* or any higher value */
-    
-     }
-     .sticky + .intro{
-        margin-top: 110px;
-        
-     }
 
 
-     .but {
-    padding: 5px 25px;
-    font-size: 1rem;
-    color: #fff;
-    font-weight: 600;
-    transition: all .2s;
-    position: relative;
-    border: none;
-    border-radius: 5px;
-    background: #443eb3;
-    transform: scale(1.1);
-  }
-
-.but:before,.but:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    background: #e76e22;
-    height: 108%;
-    width: 0;
-    z-index: -1;
-    transition: all .35s;
-    transform: translateY(-50%);
-    
-    
-  }
-  
-  .but:before {
-    left: 0%;
-    border-radius: 0px 5px 5px 0px;
-  }
-  
-  .but:after {
-    right: 0%;
-    border-radius: 5px 0px 0px 5px;
-    
-  }
-  
-  .but:hover {
-    color: #fff;
-    box-shadow: #e06112 0 30px 60px -12px inset, #ffffff 0 18px 36px -18px inset, 7px 7px 3px  #443eb3;
-    z-index: 2;
-  }
-  
-  .but:hover::before {
-    width: 50%;
-    left: 50%;
-  }
-  
-  .but:hover::after {
-    width: 50%;
-    right: 50%;
-  }  
+        .but {
+            padding: 10px 25px;
+            background-color: #443eb3;
+            color: #fff;
+            font-weight: 600;
+            margin: 20px;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
 
 
-     
-     .btnstf{
-        width: 100%;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-     }
-     #btnlft{
-        margin: 10px 30px;
-        background: none;
-        border: none;
-     }
-     #btnlft img{
-        width: 35px;
-     }
-    
-     
-    
-     #btnlft img:hover{
-        transform: scale(1.1);
-        transition: 0.5s;
-        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.421));
-     }
-    
-     .abimg1{
-        width: 550px;
-        filter: drop-shadow(3px 3px 3px);
-        border-radius: 15px;
-        transform: perspective(600px) rotateY(-30deg);
-    }
-     #btnrt{
-        margin: 10px 70px;
-        background: none;
-        border: none;
-     }
-     
-    .objective{
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        text-align: center;
-        align-items: flex-end;
-        
-    }
-     #btnrt img{
-        width: 35px;
-     }
-    
-     
-     #btnrt img:hover{
-        transform: scale(1.1);
-        transition: 0.5s;
-        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.421));
-     }
-    
-     
-footer{
-    margin-top: 100px;
-    color: white;
-    display: flex;
+
+        section.hero {
+            padding: 100px 20px 60px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        section.hero img {
+            width: 300px;
+            max-width: 80%;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        section.content {
+            padding: 60px 20px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .content p, .hero p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: #bc5312;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .profile{
     justify-content: center;
-    flex-direction: column;
-    background-color: #e06112;
-    padding: 5% 0% 0% 0%;
-}
-.fotcont{
-    font-size: large;
-    color: white;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 25px;
-    margin-right: 25px;
+    background-color: #443eb3;
+    border-radius: 10px 10px 0 0 ;
 }
+   
 
-.fotcontt{
-    color: white;
+/* Notifications */
+.notification { position: relative; margin-right: 30px; cursor: pointer; }
+.bell { font-size: 24px; position: relative; user-select: none; }
+#notifDot { width: 8px; height: 8px; background: red; border-radius: 50%; position: absolute; top: -3px; right: -6px; display: none; box-shadow: 0 0 0 2px white; }
+#notifBadge { 
+  position: absolute; top: -10px; right: -14px; 
+  min-width: 18px; height: 18px; padding: 0 6px; 
+  background: red; color: #fff; font-size: 12px; line-height: 18px; 
+  text-align: center; border-radius: 999px; display: none; font-weight: 700; 
+  box-shadow: 0 0 0 2px white;
 }
-.fotcontt1{
-    max-width: 269px;
+.dropdown {
+  display: none; position: absolute; right: 0; top: 34px; 
+  background: #fff; width: 360px; max-height: 420px; overflow-y: auto; 
+  border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,.18); z-index: 3000;
 }
-.px{
-    max-width: 269px;
+.dropdown .header { 
+  display:flex; align-items:center; justify-content:space-between; 
+  padding: 10px 12px; border-bottom:1px solid #eee; position: sticky; top:0; background:#fff; z-index:1;
 }
+.dropdown .header .title { font-weight: 800; }
+.dropdown .header .actions { display:flex; gap:8px; }
+.dropdown .btn { 
+  border: 1px solid #ddd; background:#f8f8f8; padding:6px 10px; border-radius:6px; 
+  font-size: 12px; cursor: pointer;
+}
+.dropdown .btn.primary { border-color:#443eb3; background:#443eb3; color:#fff; }
+.dropdown .btn:disabled { opacity:.6; cursor:not-allowed; }
+.dropdown .item { padding: 10px 12px; border-bottom: 1px solid #f1f1f1; cursor: pointer; }
+.dropdown .item:hover { background: #f9f9f9; }
+.dropdown .item .title { font-weight: 700; margin-bottom: 4px; }
+.dropdown .empty, .dropdown .error { padding: 14px; color: #666; text-align:center; }
+
+
 
 
      .foco {
@@ -313,22 +261,16 @@ footer{
 .event {
     padding: 20px;
 }
-.evgrp {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px; /* زيادة الفجوة قليلاً للتأكد من وجود مسافة كافية بين البطاقات */
-}
+  .enin {
+    width: 95%;
+    margin-right: 0;
+  }
 
-.enin {
-    background-color: #FFFFFF;
-    box-shadow: 4px 4px 20px #3d4e9c;
-    border-radius: 10px;
-    width: 40%; /* زيادة العرض لجعل البطاقات أكبر */
-    margin: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
+  .evgrp {
+    flex-direction: row;
+    align-items: center;
+  }
+
 
 .enin:hover img {
     transform: scale(1.8);
@@ -339,6 +281,30 @@ footer{
     width: 100%;
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
+
+
+#pagination {
+    text-align: center; /* توسيط أزرار التنقل */
+    margin-top: 20px; /* إضافة مسافة بين الأزرار وبطاقات الأحداث */
+}
+
+#pagination button {
+    padding: 5px 10px; /* تحديد حجم الأزرار */
+    margin-right: 5px; /* مسافة بين الأزرار */
+    background-color: #3d4e9c; /* لون الخلفية للأزرار */
+    border: none; /* لا حدود للأزرار */
+    color: white; /* لون النص */
+    border-radius: 5px; /* الحواف الدائرية للأزرار */
+    cursor: pointer; /* تغيير شكل المؤشر إلى يد عند المرور على الأزرار */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.519);
+}
+
+#pagination button:hover {
+    background-color: #0056b3; /* تغيير لون الخلفية عند المرور بالمؤشر */
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+
 
 .event-info {
     padding: 15px;
@@ -434,91 +400,121 @@ footer{
 }
 
 .h2{ color: #E91E63}
-
-
-
-#pagination {
-    text-align: center; /* توسيط أزرار التنقل */
-    margin-top: 20px; /* إضافة مسافة بين الأزرار وبطاقات الأحداث */
-}
-
-#pagination button {
-    padding: 5px 10px; /* تحديد حجم الأزرار */
-    margin-right: 5px; /* مسافة بين الأزرار */
-    background-color: #3d4e9c; /* لون الخلفية للأزرار */
-    border: none; /* لا حدود للأزرار */
-    color: white; /* لون النص */
-    border-radius: 5px; /* الحواف الدائرية للأزرار */
-    cursor: pointer; /* تغيير شكل المؤشر إلى يد عند المرور على الأزرار */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.519);
-}
-
-#pagination button:hover {
-    background-color: #0056b3; /* تغيير لون الخلفية عند المرور بالمؤشر */
-    transform: scale(1.1);
-    transition: 0.8s;
-}
-
     
-    
-    
-.intro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* Responsive improvements for smaller screens */
+@media screen and (max-width: 1024px) {
+  .enin {
+    width: 20%;
+  }
+
+  .objective {
     flex-direction: column;
-    gap: 25% 0%;
-    height: 600px;
-    background:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),
-    url('img/Eventint.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: rgb(255, 255, 255);
-    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.555);
-    margin-bottom: 100px;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .abimg1 {
+    width: 90%;
+    transform: none;
+    border-radius: 10px;
+  }
+
+  .sticky,
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
 
+
+  .fotcont {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .foco {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .btnstf {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #btnlft,
+  #btnrt {
+    margin: 5px auto;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+  }
 }
-    
+
+@media screen and (max-width: 768px) {
+  .enin {
+    width: 95%;
+    margin-right: 0;
+  }
+
+  .evgrp {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro {
+    height: auto;
+    padding: 60px 20px;
+    gap: 20px;
+    text-align: center;
+  }
+}
             </style>
     
     
 </head>
 <body>
 
-    <div class="intro">
 
-        <div class="container" id="myHeader">
-            <div class="logo">
-                <img src="logo.png" alt="logo">
-            </div>
-    
-            
-            <div class="nav">
-            <a href="home.php" id="lnk1">home</a>
-            <a href="events.php" id="lnk3">Events</a>
-            <a href="myprof.php" id="lnk4">My profile</a>
-            <a href="logout.php" id="lnk2">logout</a>
-            </div>
-        </div>
-
-        <div style="display: flex; justify-content: center; align-items: center;">
-        <h1 style="text-shadow: 5px 3px 6px #e06112; font-size: 3rem;">Amazing Events</h1>
-</div>
+<header class="container" id="myHeader">
+    <div class="logo">
+        <img src="logo.png" alt="logo">
     </div>
+    <nav class="nav">
+        <a href="home.php" id="lnk1">Home</a>
+        <a href="events.php" id="lnk3">Events</a>
+        <a href="myprof.php" id="lnk2">My profile</a>
 
+<!-- Notification Bell -->
+<div class="notification" id="notificationWrap">
+  <div id="notifIcon" class="bell" title="Notifications" aria-haspopup="true" aria-expanded="false">
+    🔔
+    <span id="notifDot"></span>
+    <span id="notifBadge">0</span>
+  </div>
+  <div id="notifDropdown" class="dropdown" aria-hidden="true">
+    <!-- Populated by JS -->
+  </div>
+</div>
 
+    </nav>
+</header>
+
+    
     <section class="event">
-        
         <div class="evgrp">
-
-
         <?php
         include('dbconnection.php');
-
-
         function getFirst20Words($str) {
             // Split the string into words
             $words = explode(' ', $str);
@@ -553,105 +549,8 @@ footer{
             echo "</div>";
             echo "</div>";
         }
-        
-
         ?>
 
-            
-            <div class="enin" onclick="location.href='evins.html';">
-                <img src="img/bg.jpg" class="evimg">
-                <div class="event-info">
-                    <p>اسم الفعالية: ليلة الفنون</p>
-                    <p>تاريخ الفاعلية: 30 أبريل</p>
-                </div>
-                <div class="event-details">
-                    <p>ليلة الفنون تحتفي بالمواهب الفنية الناشئة من خلال معرض يضم أعمالاً فنية متنوعة تغطي جوانب متعددة من الفن الحديث والتقليدي.</p>
-                
-                    
-                </div>
-            </div>
-            
-            <div class="enin" onclick="location.href='evins.html';">
-                <img src="img/bg.jpg" class="evimg">
-                <div class="event-info">
-                    <p>اسم الفعالية: ماراثون الجري</p>
-                    <p>تاريخ الفاعلية: 10 يونيو</p>
-                </div>
-                <div class="event-details">
-                    <p>انضم إلينا في ماراثون الجري للتنافس والاستمتاع في مسارات مصممة خصيصاً لتشجيع الرياضة والصحة العامة.</p>
-                </div>
-            </div>
-            
-            <div class="enin" onclick="location.href='evins.html';">
-                <img src="img/bg.jpg" class="evimg">
-                <div class="event-info">
-                    <p>اسم الفعالية: مؤتمر التكنولوجيا</p>
-                    <p>تاريخ الفاعلية: 25 نوفمبر</p>
-                </div>
-                <div class="event-details">
-                    <p>مؤتمر التكنولوجيا يستقطب خبراء الصناعة لمناقشة التقدم التكنولوجي الأحدث وتأثيره على مجتمعاتنا اليوم.</p>
-                </div>
-            </div>
-            <div class="enin" onclick="location.href='evins.html';">
-                <img src="img/bg.jpg" class="evimg">
-                <div class="event-info">
-                    <p>Name: asladkjx</p>
-                    <p>Name: asladkjx</p>
-                </div>
-                <div class="event-details">
-                    <p>Detailed event description here...</p>
-                </div>
-            </div>
-            <div class="enin" onclick="location.href='evins.html';">
-                <img src="img/bg.jpg" class="evimg">
-                <div class="event-info">
-                    <p>Name: asladkjx</p>
-                    <p>Name: asladkjx</p>
-                </div>
-                <div class="event-details">
-                    <p>Detailed event description here...</p>
-                </div>
-            </div>
-            <div class="enin" onclick="location.href='evins.html';">
-                <img src="img/bg.jpg" class="evimg">
-                <div class="event-info">
-                    <p>Name: asladkjx</p>
-                    <p>Name: asladkjx</p>
-                </div>
-                <div class="event-details">
-                    <p>Detailed event description here...</p>
-                </div>
-            </div>
-            <div class="enin" onclick="location.href='evins.html';">
-                <img src="img/bg.jpg" class="evimg">
-                <div class="event-info">
-                    <p>Name: asladkjx</p>
-                    <p>Name: asladkjx</p>
-                </div>
-                <div class="event-details">
-                    <p>Detailed event description here...</p>
-                </div>
-            </div>
-            <div class="enin" onclick="location.href='evins.html';">
-                <img src="img/bg.jpg" class="evimg">
-                <div class="event-info">
-                    <p>Name: asladkjx</p>
-                    <p>Name: asladkjx</p>
-                </div>
-                <div class="event-details">
-                    <p>Detailed event description here...</p>
-                </div>
-            </div>
-            <div class="enin">
-                <img src="img/bg.jpg" class="evimg">
-                <div class="event-info">
-                    <p>Name: asladkjx</p>
-                    <p>Name: asladkjx</p>
-                </div>
-                <div class="event-details">
-                    <p>Detailed event description here...</p>
-                </div>
-            </div>
         </div>
         <div id="pagination">
             <button id="prevPage">&laquo; Previous</button> <!-- زر الصفحة السابقة -->
@@ -660,42 +559,26 @@ footer{
         </div>
     </section>
 
-    <footer>
-        
-        <div class="fotcont">
-
-            <div class="fotcontt">
-                <p>University of Technology and Applied Sciences</p>
-                <p>PO Box 135, Khawr As Siyabi, Suhar 311</p>
-                <p>Sultanate of Oman</p>
-            </div>
-            <div class="fotcontt">
-                <ul class="fcoimg"><img src="img/call.png" width="20px" >&nbsp; +968 22056900</ul>
-                <ul class="fcoimg"><img src="img/mail (1).png" width="20px">&nbsp; Send us email</ul>
-                <ul class="fcoimg"><img src="img/pin.png" width="20px">&nbsp; Get Map Direction</ul>
-            </div>
-            <div class="fotcontt1">
-                <img class="px" src="img/sohar-white.png"><br><br>
-                <img class="px" src="img/broad-white.png">
-            </div>
-
-
+<footer style="
+    background-color: #e06112;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+">
+    <div>
+        <h3 style="margin-bottom: 10px;">Department of Computer Science</h3>
+        <p style="margin: 5px 0;">© 2025 Rivers State University</p>
+        <p style="margin: 5px 0;">Nkpolu-Oroworukwo, Port Harcourt, Nigeria</p>
+        <div style="margin-top: 15px;">
+            <a href="mailto:csdept@rsu.edu.ng" style="color: white; text-decoration: underline; margin-right: 10px;">Email Us</a>
+            |
+            <a href="#" style="color: white; text-decoration: underline; margin-left: 10px;">Visit Website</a>
         </div>
-
-        <div>
-            <div></div>
-        <div class="foco">
-            <img src="img/instagram (2).png" alt="insta" width="50px">
-            <img src="img/twitter.png" alt="X" width="30px">
-            <img src="img/linkedin-big-logo.png" alt="linkedin" width="30px">
-        </div>
-
-        <div></div>
-
     </div>
+</footer>
 
-
-    </footer>
 
     <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -703,12 +586,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.querySelector(".evgrp");
     const cards = Array.from(container.children);
     const totalPages = Math.ceil(cards.length / cardsPerPage);
-    let currentPage = 1; // الصفحة الحالية
+    let currentPage = 1; 
 
     function showPage(page) {
-        if (page < 1 || page > totalPages) return; // تأكد من أن الصفحة ضمن الحدود
-        currentPage = page; // تحديث الصفحة الحالية
-        container.innerHTML = ''; // إزالة البطاقات الحالية
+        if (page < 1 || page > totalPages) return; 
+        currentPage = page; 
+        container.innerHTML = ''; 
         const start = (page - 1) * cardsPerPage;
         const end = start + cardsPerPage;
         cards.slice(start, end).forEach(card => {
@@ -718,24 +601,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function setupPagination() {
         const pagination = document.getElementById('pagination');
-        pagination.innerHTML = ''; // إزالة الأزرار الحالية
+        pagination.innerHTML = '';
 
-        // زر الانتقال للصفحة السابقة
+
         const prevBtn = document.createElement('button');
         prevBtn.textContent = '«';
         prevBtn.onclick = () => showPage(currentPage - 1);
         pagination.appendChild(prevBtn);
 
-        // أزرار الترقيم
+    
         for (let i = 1; i <= totalPages; i++) {
             const btn = document.createElement('button');
             btn.textContent = i;
-            btn.className = currentPage === i ? 'active' : ''; // تمييز الصفحة الحالية
+            btn.className = currentPage === i ? 'active' : '';
             btn.onclick = () => showPage(i);
             pagination.appendChild(btn);
         }
 
-        // زر الانتقال للصفحة التالية
+        
         const nextBtn = document.createElement('button');
         nextBtn.textContent = '»';
         nextBtn.onclick = () => showPage(currentPage + 1);
@@ -743,37 +626,137 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     setupPagination();
-    showPage(1); // عرض الصفحة الأولى في البداية
+    showPage(1);
 });
 
         
         </script>
-        <script>
-            window.onscroll = function() {myFunction()};
-            
-            var header = document.getElementById("myHeader");
-            var sticky = header.offsetTop;
-            
-            
-            function myFunction() {
-              if (window.pageYOffset > sticky) {
-                header.setAttribute("class","sticky");
-                document.getElementById("lnk1").style.color= "black";
-                document.getElementById("lnk2").style.color= "black";
-                document.getElementById("lnk3").style.color= "black";
-                document.getElementById("lnk4").style.color= "black";
-                document.getElementById("lnk5").style.color= "black";
-              } else {
-                header.setAttribute("class","container");
-                document.getElementById("lnk1").style.color= "white";
-                document.getElementById("lnk2").style.color= "white";
-                document.getElementById("lnk3").style.color= "white";
-                document.getElementById("lnk4").style.color= "white";
-                document.getElementById("lnk5").style.color= "white";
-                
-              }
-            }
-            </script>
+    <script>
+let dropdownOpen = false;
+let lastData = null;
+
+function truncate(str, n){ if(!str) return ''; return (str.length>n)? str.substr(0,n-1)+'…': str; }
+function escapeHtml(t){ if(!t) return ''; return t.replace(/[&<>"'\/]/g, s=>({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':'&quot;',"'":'&#39;',"/":'&#x2F;' }[s])); }
+
+async function fetchNotifications(showSpinner=false){
+  const dropdown = document.getElementById('notifDropdown');
+  if(showSpinner){ dropdown.innerHTML = '<div class="empty">Loading…</div>'; }
+  try {
+    const res = await fetch('get_notifications.php', { cache: 'no-store' });
+    if(!res.ok) throw new Error('Network error');
+    const data = await res.json();
+    lastData = data;
+    updateBadges(data);
+    if(dropdownOpen){ renderDropdown(data); }
+  } catch (e) {
+    console.error(e);
+    if(dropdownOpen){
+      dropdown.innerHTML = '<div class="error">Couldn\'t load notifications. <button class="btn" onclick="fetchNotifications(true)">Retry</button></div>';
+    }
+  }
+}
+
+function updateBadges(data){
+  const badge = document.getElementById('notifBadge');
+  const dot = document.getElementById('notifDot');
+  const count = (data && typeof data.new_count === 'number') ? data.new_count : 0;
+
+  if(count > 0){
+    badge.style.display = 'inline-block';
+    badge.textContent = count > 99 ? '99+' : String(count);
+    dot.style.display = 'none';
+  } else {
+    badge.style.display = 'none';
+    // show a tiny dot only if there are events at all (for not-logged-in case)
+    dot.style.display = (data && data.has_new && !data.auth) ? 'block' : 'none';
+  }
+}
+
+function renderDropdown(data){
+  const dropdown = document.getElementById('notifDropdown');
+  const events = (data && Array.isArray(data.events)) ? data.events : [];
+  const count = data ? (data.new_count || 0) : 0;
+  const auth = !!(data && data.auth);
+
+  let html = '';
+  html += '<div class="header">';
+  html +=   '<div class="title">Notifications</div>';
+  html +=   '<div class="actions">';
+  html +=     `<button class="btn" onclick="window.location.href='events.php'">View all</button>`;
+  html +=     `<button id="markAllBtn" class="btn primary" ${(!auth || count===0) ? 'disabled' : ''} onclick="markAllRead()">Mark all as read</button>`;
+  html +=   '</div>';
+  html += '</div>';
+
+  if(events.length === 0){
+    html += '<div class="empty">No recent events</div>';
+  } else {
+    events.forEach(ev => {
+      const title = escapeHtml(ev.EName || 'Untitled');
+      const desc  = escapeHtml(truncate(ev.EDisc || '', 100));
+      const dates = escapeHtml(`${ev.StartDate || ''}${ev.EndDate ? ' → '+ev.EndDate : ''}`);
+      html += `<div class="item" onclick="window.location.href='events.php?id=${ev.EID}'">
+                 <div class="title">${title}</div>
+                 <div style="font-size:.9rem;color:#666;">${dates}</div>
+                 <div style="font-size:.9rem;color:#444;margin-top:2px;">${desc}</div>
+               </div>`;
+    });
+  }
+
+  dropdown.innerHTML = html;
+}
+
+async function markAllRead(){
+  try{
+    const res = await fetch('mark_notifications_read.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, cache: 'no-store' });
+    const json = await res.json();
+    if(json && json.success){
+      // reset counters locally
+      if(lastData){
+        lastData.last_seen_eid = json.max_eid || lastData.last_seen_eid;
+        lastData.new_count = 0;
+        lastData.has_new = false;
+      }
+      updateBadges(lastData || { new_count: 0, has_new: false, auth: true });
+      // also refresh list in case you want to reflect "read" state immediately
+      renderDropdown(lastData || { events: [] , new_count: 0, auth: true });
+    } else {
+      alert(json.message || 'Could not mark as read.');
+    }
+  } catch(e){
+    console.error(e);
+    alert('Network error while marking as read.');
+  }
+}
+
+// Toggle dropdown — ALWAYS open, even before data loads
+document.getElementById('notifIcon').addEventListener('click', async () => {
+  const dropdown = document.getElementById('notifDropdown');
+  dropdownOpen = dropdown.style.display !== 'block';
+  dropdown.style.display = dropdownOpen ? 'block' : 'none';
+  document.getElementById('notifIcon').setAttribute('aria-expanded', dropdownOpen ? 'true':'false');
+  dropdown.setAttribute('aria-hidden', dropdownOpen ? 'false':'true');
+
+  if(dropdownOpen){
+    // ensure content is present when opened
+    await fetchNotifications(true);
+    if(lastData) renderDropdown(lastData);
+  }
+});
+
+// click-away to close
+document.addEventListener('click', (e) => {
+  const wrap = document.getElementById('notificationWrap');
+  const dropdown = document.getElementById('notifDropdown');
+  if(!wrap.contains(e.target)){
+    dropdown.style.display = 'none';
+    dropdownOpen = false;
+  }
+});
+
+// Initial fetch + polling
+fetchNotifications(false);
+setInterval(fetchNotifications, 10000);
+</script>
             <script>
                 AOS.init();
               </script>

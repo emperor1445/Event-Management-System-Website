@@ -104,7 +104,4 @@ elseif($_GET['usertype'] == 'admin'){
         }
     }
 }
-
-
-
 ?>

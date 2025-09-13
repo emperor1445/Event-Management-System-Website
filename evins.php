@@ -27,6 +27,89 @@ $_SESSION['SDemail']=$SDemail;
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Event Details</title>
+
+    <style>
+                footer {
+            background-color: #bc5312;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+  .container {
+    flex-direction: row;           /* Keep logo and nav side by side */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;             /* Prevent wrapping */
+    padding: 10px 5%;
+  }
+
+  .nav {
+    flex-direction: row;           /* Keep links horizontal */
+    justify-content: flex-end;
+    gap: 1rem;
+    width: auto;
+  }
+
+  .nav a {
+    font-size: 0.95rem;
+    padding: 4;
+  }
+
+  .logo img {
+    width: 50px;                   /* Slightly smaller logo for mobile */
+  }
+
+      .allcont {
+        width: 95%;
+        margin-top: 120px;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .disp {
+        width: 100%;
+        align-items: flex-start;
+        padding: 0 1rem;
+    }
+
+    .discription p {
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .grp {
+        width: 90%;
+    }
+
+    .btnss {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fotcont {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foco {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+}
+        </style>
 </head>
 <body>
     
@@ -39,10 +122,9 @@ $_SESSION['SDemail']=$SDemail;
 
         
         <div class="nav">
-        <a href="home.php" id="lnk1">home</a>
+        <a href="home.php" id="lnk1">Home</a>
         <a href="events.php" id="lnk4">Events</a>
         <a href="myprof.php" id="lnk5">My profile</a>
-        <a href="logout.php" id="lnk2">logout</a>
 
         </div>
     </div>
@@ -161,46 +243,18 @@ else{
 
 
 
-
-
-
-
 <footer>
-        
-    <div class="fotcont">
-
-        <div class="fotcontt">
-            <p>University of Technology and Applied Sciences</p>
-            <p>PO Box 135, Khawr As Siyabi, Suhar 311</p>
-            <p>Sultanate of Oman</p>
-        </div>
-        <div class="fotcontt">
-            <ul class="fcoimg"><img src="img/call.png" width="20px" >&nbsp; +968 22056900</ul>
-            <ul class="fcoimg"><img src="img/mail (1).png" width="20px">&nbsp; Send us email</ul>
-            <ul class="fcoimg"><img src="img/pin.png" width="20px">&nbsp; Get Map Direction</ul>
-        </div>
-        <div class="fotcontt1">
-            <img class="px" src="img/sohar-white.png"><br><br>
-            <img class="px" src="img/broad-white.png">
-        </div>
-
-
-    </div>
-
     <div>
-        <div></div>
-    <div class="foco">
-        <img src="img/instagram (2).png" alt="insta" width="50px">
-        <img src="img/twitter.png" alt="X" width="30px">
-        <img src="img/linkedin-big-logo.png" alt="linkedin" width="30px">
+        <h3>Department of Computer Science</h3>
+        <p>© 2025 Rivers State University</p>
+        <p>Nkpolu-Oroworukwo, Port Harcourt, Nigeria</p>
+        <div style="margin-top: 10px;">
+            <a href="mailto:csdept@rsu.edu.ng">Email Us</a> |
+            <a href="#">Visit Website</a>
+        </div>
     </div>
-
-    <div></div>
-
-</div>
-
-
 </footer>
+
 
 
 </body>

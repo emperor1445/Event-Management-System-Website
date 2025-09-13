@@ -206,6 +206,45 @@ footer{
     margin-left: 2.5rem;
 }
 
+/* FOOTER */
+footer {
+  background-color: #bc5312;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row;           /* Keep logo and nav side by side */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;             /* Prevent wrapping */
+    padding: 10px 5%;
+  }
+
+  .nav {
+    flex-direction: row;           /* Keep links horizontal */
+    justify-content: flex-end;
+    gap: 1rem;
+    width: auto;
+  }
+
+  .nav a {
+    font-size: 0.95rem;
+    padding: 0;
+  }
+
+  .logo img {
+    width: 50px;                   /* Slightly smaller logo for mobile */
+  }
+}
 
     </style>
 
@@ -243,18 +282,19 @@ footer{
       <label for="Ename">Event Name:</label>
       <input type="text" name="Ename" required>
     </div>
-    <div class="input-group">
-      <label for="Supervisor">Supervisor:</label>
-      <input type="text" name="Supervisor" required>
-    
-      <label for="StartDate">StartDate:</label>
-      <input type="date" name="StartDate" required>
-    </div>
+
     <div class="input-group">
       <label for="EndDate">EndDate:</label>
       <input type="date" name="EndDate" required>
       <label for="Eimg">Event Image:</label>
       <input type="file" name="Eimg" required>
+    </div>
+        <div class="input-group">
+      <label for="Supervisor">Supervisor:</label>
+      <input type="text" name="Supervisor" required>
+    
+      <label for="StartDate">StartDate:</label>
+      <input type="date" name="StartDate" required>
     </div>
     <div class="input-group">
     <label for="Edisc">Event Description:</label>
@@ -389,75 +429,19 @@ if (isset($_POST['add'])){
 ?>
 
 
+<footer>
+  <h3>Department of Computer Science</h3>
+  <p>© 2025 Rivers State University</p>
+  <p>Nkpolu-Oroworukwo, Port Harcourt, Nigeria</p>
+  <div>
+    <a href="mailto:csdept@rsu.edu.ng">Email Us</a> |
+    <a href="#">Visit Website</a>
+  </div>
+</footer>
 
-
-    <footer>
-        
-        <div class="fotcont">
-
-            <div class="fotcontt">
-                <p>University of Technology and Applied Sciences</p>
-                <p>PO Box 135, Khawr As Siyabi, Suhar 311</p>
-                <p>Sultanate of Oman</p>
-            </div>
-            <div class="fotcontt">
-                <ul class="fcoimg"><img src="img/call.png" width="20px" >&nbsp; +968 22056900</ul>
-                <ul class="fcoimg"><img src="img/mail (1).png" width="20px">&nbsp; Send us email</ul>
-                <ul class="fcoimg"><img src="img/pin.png" width="20px">&nbsp; Get Map Direction</ul>
-            </div>
-            <div class="fotcontt1">
-                <img class="px" src="img/sohar-white.png"><br><br>
-                <img class="px" src="img/broad-white.png">
-            </div>
-
-
-        </div>
-
-        <div>
-            <div></div>
-        <div class="foco">
-            <img src="img/instagram (2).png" alt="insta" width="50px">
-            <img src="img/twitter.png" alt="X" width="30px">
-            <img src="img/linkedin-big-logo.png" alt="linkedin" width="30px">
-        </div>
-
-        <div></div>
-
-    </div>
-
-
-    </footer>
-
+<script>
+  AOS.init();
+</script>
 
 </body>
-<script>
-    window.onscroll = function() {myFunction()};
-    
-    var header = document.getElementById("myHeader");
-    var sticky = header.offsetTop;
-    
-    
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header.setAttribute("class","sticky");
-        document.getElementById("lnk1").style.color= "black";
-        document.getElementById("lnk2").style.color= "black";
-        document.getElementById("lnk3").style.color= "black";
-        document.getElementById("lnk4").style.color= "black";
-        document.getElementById("lnk5").style.color= "black";
-      } else {
-        header.setAttribute("class","container");
-        document.getElementById("lnk1").style.color= "black";
-        document.getElementById("lnk2").style.color= "black";
-        document.getElementById("lnk3").style.color= "black";
-        document.getElementById("lnk4").style.color= "black";
-        document.getElementById("lnk5").style.color= "black";
-        
-      }
-    }
-    </script>
-    <script>
-        AOS.init();
-    </script>
-
 </html>

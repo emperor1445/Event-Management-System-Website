@@ -8,9 +8,8 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin page</title>
-    <style>
+    <style>  
 body{
-    text-shadow:3px 3px 3px rgba(0,0,0,0.5);
     box-sizing:border-box;
     padding:0;
     margin:0;
@@ -18,51 +17,6 @@ body{
     text-transform: capitalize;
 }
 
-.container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 99.5%;
-        box-sizing: border-box;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        color: white;
-        background-color:transparent;
-        transition: 0.5s;
-        padding-bottom: 5px;
-        z-index: 1000; /* or any higher value */
-
-    }
-    .logo{
-        display: flex;
-        margin: 0px 0px 3px 17px;
-    }
-    .logo img{
-        width: 65px;
-    }
-    .nav{
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-    
-    }
-    
-    .nav a{
-        padding-right: 2rem;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: large;
-        color: white;
-        font-weight: 900;
-        transition: 0.3s;
-    }
-    .nav a:hover{
-        transform: scale(1.1);
-        transition-duration: 0.6s;
-        color: #e06112;
-        text-shadow:3px 3px 4px black;
-    }
     .px{
         max-width: 269px;
     }
@@ -96,7 +50,7 @@ h1,h2{
 
 table {
     width: 95%;
-    border: solid 1px #f08400;
+    border: solid 1px #bc5312;
     border-collapse: collapse;
     border-spacing: 0;
     font: normal 13px Arial, sans-serif;
@@ -105,40 +59,19 @@ table {
 
 }
 table th {
-    background-color: #f08400;
-    border: solid 1px #f08400;
+    background-color: #bc5312;
+    border: solid 1px #bc5312;
     color: #336B6B;
     padding: 10px;
     text-align: left;
-    text-shadow: 1px 1px 1px #fff;
 }
 table  td {
-    border: solid 1px #f08400;
+    border: solid 1px #bc5312;
     color: #333;
     padding: 10px;
-    text-shadow: 1px 1px 1px #fff;
 }
 
 
-        .intro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 25% 0%;
-    height: 600px;
-    background:
-    linear-gradient(to right,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.36)),
-    url('img/admin.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: rgb(255, 255, 255);
-    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.555);
-    margin-bottom: 100px;
-
-
-}
    
 footer{
     margin-top: 100px;
@@ -146,7 +79,7 @@ footer{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: #e06112;
+    background-color: #bc5312;
     padding: 5% 0% 0% 0%;
 }
 .fotcont{
@@ -182,26 +115,130 @@ footer{
         margin-top: 10px;
     }
 
+        .but {
+            padding: 10px 25px;
+            background-color: #443eb3;
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .but:hover {
+            background-color: #e06112;
+        }
+
+        section.hero {
+            padding: 100px 20px 60px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        section.hero img {
+            width: 300px;
+            max-width: 80%;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        section.content {
+            padding: 60px 20px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .content p, .hero p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: #bc5312;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+                        .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 99.5%;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        color: black;
+        background-color:white;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.569),3px 3px 5px rgba(0, 0, 0, 0.569);
+        transition: 0.5s;
+        padding-bottom: 5px;
+        z-index: 1000; /* or any higher value */
+
+    }
+    .logo{
+        display: flex;
+        margin: 0px 0px 3px 17px;
+    }
+    .logo img{
+        width: 65px;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    
+    }
+    
+    .nav a{
+        padding-right: 2rem;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: large;
+        color: black;
+        font-weight: 900;
+        transition: 0.3s;
+    }
+    .nav a:hover{
+        transform: scale(1.1);
+        transition-duration: 0.6s;
+        color: black;
+        text-shadow:3px 3px 4px black;
+    }
+
     </style>
 </head>
 <body>
 
-    <div class="intro">
-    <div class="container" id="myHeader">
-        <div class="logo">
-            <img src="logo.png" alt="logo">
-        </div>
 
-        
-        <div class="nav">
-        <a href="index.html" id="lnk1">home</a>
+<header class="container" id="myHeader">
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+    </div>
+    <nav class="nav">
+        <a href="index.html" id="lnk1">Home</a>
         <a href="logout.php" id="lnk2">logout</a>
-        </div>
-    </div>
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <h1 style="text-shadow: 5px 3px 6px #e06112; font-size: 3rem;">Administrator Page</h1>
-        </div>
-    </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1 style="font-size: 2.5em; color: #443eb3;">
+        Administrative Dashboard
+    </h1>
+    <p>
+        Welcome to the administrative dashboard. Here you can manage students, staff, events, and more. Use the navigation links to access different sections of the system.
+    </p>
+    <img src="img/admin.png" alt="illustration">
+</section>
 
     <h1>Database Tables</h1>
     <br><br><br><br>
@@ -225,7 +262,6 @@ footer{
 	echo "<th>Student Name</th>";
 	echo "<th>Student user name</th>";
 	echo "<th>Student email</th>";
-	echo "<th>Student image</th>";
 	echo "<th>Student phone</th>";
 	echo "<th>student password</th>";
 	echo "<th>Student major</th>";
@@ -239,7 +275,6 @@ footer{
 			echo "<td>{$row['SDname']}</td>";
 			echo "<td>{$row['SDusername']}</td>";
 			echo "<td>{$row['SDemail']}</td>";
-			echo "<td>{$row['SDimg']}</td>";
 			echo "<td>{$row['SDphone']}</td>";
 			echo "<td>{$row['SDpassword']}</td>";
 			echo "<td>{$row['SDmajor']}</td>";
@@ -285,7 +320,6 @@ else
 	echo "<th>Staff phone</th>";
 	echo "<th>Staff password</th>";
 	echo "<th>Staff major</th>";
-    echo "<th>Staff image</th>";
 	echo "<th></th>";
  echo "</tr>";
 
@@ -299,7 +333,6 @@ else
 			echo "<td>{$row['STphone']}</td>";
 			echo "<td>{$row['STPassword']}</td>";
 			echo "<td>{$row['STmajor']}</td>";
-            echo "<td>{$row['STimg']}</td>";
 		echo "<td>
 			<a href='deletestaff.php?StID={$row['StID']}'
 			onclick=\"return confirm('Do you want to delete this user?');\">
@@ -343,7 +376,6 @@ else
 	echo "<th>Event Supervisor</th>";
 	echo "<th>Start Date</th>";
     echo "<th>End Date</th>";
-    echo "<th>Staff ID</th>";
     echo "<th></th>";
  echo "</tr>";
 
@@ -358,7 +390,6 @@ else
 			echo "<td>{$row['Supervisor']}</td>";
 			echo "<td>{$row['StartDate']}</td>";
             echo "<td>{$row['EndDate']}</td>";
-            echo "<td>{$row['StID']}</td>";
 		echo "<td>
 			<a href='deleteevent.php?EID={$row['EID']}'
 			onclick=\"return confirm('Do you want to delete this user?');\">
@@ -426,105 +457,28 @@ else
 	echo "No Data in the table <br><br>";
 	
 }
-
-
-?>
-
-
-<?php
-
- $sql="select * from studentcertificate";
- $stmt=$conn->query($sql);
- $rows=$stmt->fetchAll(PDO::FETCH_ASSOC);
- $n=$stmt->rowCount();
- if($n>0)
- {
- echo "<h2> Student's Certificates </h2>";
- echo "<table border='2'>";
- echo "<tr>";
-	echo "<th>Certificate ID</th>";
-	echo "<th>Student ID</th>";
-	echo "<th>Certificate Name</th>";
-	echo "<th>Certificate Image</th>";
-    echo "<th><a href='addcert.php'>Add</a></th>";
- echo "</tr>";
-
-	foreach($rows as $row)
-	{
-		echo "<tr>";
-			echo "<td>{$row['CID']}</td>";
-			echo "<td>{$row['SdID']}</td>";
-			echo "<td>{$row['Cname']}</td>";
-			echo "<td>{$row['Cimg']}</td>";
-		echo "<td>
-			<a href='deletecert.php?CID={$row['CID']}'
-			onclick=\"return confirm('Do you want to delete this user?');\">
-			Delete</a>
-			</td>";
-		echo "</tr>";
-	}
-	echo "</table><br><br>";
-}
-else
-{
-    echo "<h2> Student's Certificates </h2>";
-	echo "No Data in the table <br><br>";
-	
-}
-
-
 ?>
 
 
 
 
-
-
-
-
-
-<footer>
-        
-        <div class="fotcont">
-
-            <div class="fotcontt">
-                <p>University of Technology and Applied Sciences</p>
-                <p>PO Box 135, Khawr As Siyabi, Suhar 311</p>
-                <p>Sultanate of Oman</p>
-            </div>
-            <div class="fotcontt">
-                <ul class="fcoimg"><img src="img/call.png" width="20px" >&nbsp; +968 22056900</ul>
-                <ul class="fcoimg"><img src="img/mail (1).png" width="20px">&nbsp; Send us email</ul>
-                <ul class="fcoimg"><img src="img/pin.png" width="20px">&nbsp; Get Map Direction</ul>
-            </div>
-            <div class="fotcontt1">
-                <img class="px" src="img/sohar-white.png"><br><br>
-                <img class="px" src="img/broad-white.png">
-            </div>
-
-
+<footer style="background-color:#bc5312; color:white; padding:40px 20px; text-align:center; font-family:Verdana, sans-serif;">
+    <div style="max-width: 800px; margin: auto;">
+        <h3 style="margin-bottom: 10px; font-size: 20px; letter-spacing: 1px;">Department of Computer Science</h3>
+        <p style="margin: 5px 0;">© 2025 Rivers State University</p>
+        <p style="margin: 5px 0;">Nkpolu-Oroworukwo, Port Harcourt, Nigeria</p>
+        <div style="margin-top: 20px;">
+            <a href="mailto:csdept@rsu.edu.ng" style="color: #ffffff; text-decoration: none; margin: 0 10px;">Email Us</a> |
+            <a href="#" style="color: #ffffff; text-decoration: none; margin: 0 10px;">Visit Website</a>
         </div>
-
-        <div>
-            <div></div>
-        <div class="foco">
-            <img src="img/instagram (2).png" alt="insta" width="50px">
-            <img src="img/twitter.png" alt="X" width="30px">
-            <img src="img/linkedin-big-logo.png" alt="linkedin" width="30px">
-        </div>
-
-        <div></div>
-
     </div>
+</footer>
 
 
-    </footer>
 
-    
 </body>
-
 <script>
-        window.onscroll = function() {myFunction()};
+    window.onscroll = function() {myFunction()};
     
     var header = document.getElementById("myHeader");
     var sticky = header.offsetTop;
@@ -548,7 +502,8 @@ else
         
       }
     }
-
-</script>
-
+    </script>
+    <script>
+        AOS.init();
+      </script>
 </html>

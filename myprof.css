@@ -50,7 +50,7 @@ body {
 .nav a:hover{
     transform: scale(1.1);
     transition-duration: 0.6s;
-    color: #e06112;
+    color: #443eb3;
     text-shadow:3px 3px 4px black;
 }
 .px{
@@ -161,7 +161,7 @@ footer{
     justify-content: center;
     width: 100%;
     display: flex;
-    background-color: #e15f11;
+    background-color: #443eb3;
     border-radius: 10px 10px 0 0 ;
 }
 .info{
@@ -225,7 +225,7 @@ footer{
   
   .but:hover {
     color: #fff;
-    box-shadow: #e06112 0 30px 60px -12px inset, #ffffff 0 18px 36px -18px inset, 7px 7px 3px  #443eb3;
+    box-shadow: #443eb3 0 30px 60px -12px inset, #ffffff 0 18px 36px -18px inset, 7px 7px 3px  #e76e22;
     z-index: 2;
   }
   
